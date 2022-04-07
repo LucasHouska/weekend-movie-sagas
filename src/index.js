@@ -27,18 +27,18 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 function* fetchDetails(action) {
-    try{
+    try {
         console.log('The payload for fetchDetails is:', action.payload)
 
         const details = yield axios.get(`/api/movie/details/${action.payload}`)
 
         console.log('Get details:', details.data)
 
-        yield put({type: 'SET_DETAILS', payload: details.data})
+        yield put({ type: 'SET_DETAILS', payload: details.data })
     } catch (err) {
         console.log('Sorry dude, error in fetchDetails', err);
     }
@@ -67,11 +67,21 @@ const genres = (state = [], action) => {
     }
 }
 
+const details = (state = [], action) => {
+    switch(action.type) {
+        case 'SET_DETAILS':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        details
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
@@ -83,7 +93,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
