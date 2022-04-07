@@ -6,6 +6,7 @@ function Details() {
     const history = useHistory();
 
     const details = useSelector(state => state.details)
+    const genres = useSelector(state => state.genres)
 
     console.log('details in Details is', details)
 
@@ -22,11 +23,19 @@ function Details() {
                         <img src={detail.poster} />
                         <h2>{detail.title}</h2>
                         <p>{detail.description}</p>
-                        <p>Show all genres for this movie</p>
-                        <button onClick={backToMovies}>Back to movie list</button>
                     </div>
                 )
             })}
+            <ul>
+                {genres.map((genre, i) => {
+                    return (
+                        <li>
+                            {genre.name}
+                        </li>
+                    )
+                })}
+            </ul>
+            <button onClick={backToMovies}>Back to Movie List</button>
         </>
     )
 }

@@ -8,9 +8,10 @@ function MovieItem({movie}) {
 
     const handleClick = () => {
 
-        dispatch({type: 'FETCH_DETAILS', payload: movie.id})
+        dispatch({type: 'FETCH_DETAILS', payload: movie.id});
+        dispatch({type: 'FETCH_GENRES', payload: movie.id});
         
-        history.push(`/details`)
+        history.push(`/details`);
     }
 
     return (
