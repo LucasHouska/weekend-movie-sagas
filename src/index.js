@@ -108,6 +108,8 @@ const storeInstance = createStore(
 // Pass rootSaga into our sagaMiddleware
 sagaMiddleware.run(rootSaga);
 
+
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>

@@ -11,6 +11,7 @@ function MovieItem({ movie }) {
     const dispatch = useDispatch();
     const history = useHistory();
 
+
     const handleClick = () => {
 
         dispatch({ type: 'FETCH_DETAILS', payload: movie.id });
@@ -20,8 +21,8 @@ function MovieItem({ movie }) {
     }
 
     return (
-        <>
-            <Card sx={{ maxWidth: 345 }}>
+        <div className="cards">
+            <Card sx={{ maxWidth: 245 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -29,7 +30,7 @@ function MovieItem({ movie }) {
                         alt={movie.title}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h5" component="div" nowrap="false">
                             {movie.title}
                         </Typography>
                     </CardContent>
@@ -40,7 +41,7 @@ function MovieItem({ movie }) {
                     </Button>
                 </CardActions>
             </Card>
-        </>
+        </div>
     )
 }
 

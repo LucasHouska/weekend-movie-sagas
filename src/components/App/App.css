@@ -23,6 +23,19 @@
   to { transform: rotate(360deg); }
 }
 
+img {
+  height: 400px;
+  width: 250px;
+}
+
 li {
   list-style-type: none;
+}
+
+.cards {
+  margin: 10px;
+}
+
+.MuiCardMedia-media {
+  width: 250px;
 }
