@@ -29,7 +29,7 @@ function Details() {
             <ul>
                 {genres.map((genre, i) => {
                     return (
-                        <li>
+                        <li key={i}>
                             {genre.name}
                         </li>
                     )
