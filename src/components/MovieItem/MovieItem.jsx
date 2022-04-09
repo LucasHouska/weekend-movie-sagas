@@ -30,7 +30,7 @@ function MovieItem({ movie }) {
                         alt={movie.title}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" nowrap="false">
+                        <Typography gutterBottom variant="h5" component="div" align="justify">
                             {movie.title}
                         </Typography>
                     </CardContent>
