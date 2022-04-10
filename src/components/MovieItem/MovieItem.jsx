@@ -17,23 +17,20 @@ function MovieItem({ movie }) {
         dispatch({ type: 'FETCH_DETAILS', payload: movie.id });
         dispatch({ type: 'FETCH_GENRES', payload: movie.id });
 
-        history.push(`/details`);
+        history.push(`/details/${movie.id}`);
     }
 
     return (
         <div className="cards">
-            <Card sx={{ maxWidth: 245 }}>
+            <Card variant='outlined'>
                 <CardActionArea>
                     <CardMedia
                         component="img"
+                        height="500"
+                        width="350"
                         image={movie.poster}
                         alt={movie.title}
                     />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" align="justify">
-                            {movie.title}
-                        </Typography>
-                    </CardContent>
                 </CardActionArea>
                 <CardActions>
                     <Button onClick={handleClick} size="small" color="primary">
