@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import {Button} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 function Details() {
 
@@ -22,26 +22,28 @@ function Details() {
 
     return (
         <>
-            <h1>Details</h1>
-            {details.map((detail, i) => {
-                return (
-                    <div key={i}>
-                        <img src={detail.poster} />
-                        <h2>{detail.title}</h2>
-                        <p>{detail.description}</p>
-                    </div>
-                )
-            })}
-            <ul>
-                {genres.map((genre, i) => {
+            <div className='details'>
+                <h1>Details</h1>
+                {details.map((detail, i) => {
                     return (
-                        <li key={i}>
-                            {genre.name}
-                        </li>
+                        <div key={i}>
+                            <img src={detail.poster} />
+                            <h2>{detail.title}</h2>
+                            <p>{detail.description}</p>
+                        </div>
                     )
                 })}
-            </ul>
-            <Button variant="contained" color="primary" onClick={backToMovies}>Back to Movie List</Button>
+                <ul>
+                    {genres.map((genre, i) => {
+                        return (
+                            <li key={i}>
+                                {genre.name}
+                            </li>
+                        )
+                    })}
+                </ul>
+                <Button variant="contained" color="primary" onClick={backToMovies}>Back to Movie List</Button>
+            </div>
         </>
     )
 }
