@@ -26,8 +26,8 @@ function MovieItem({ movie }) {
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="500"
-                        width="350"
+                        height="auto"
+                        width="auto"
                         image={movie.poster}
                         alt={movie.title}
                     />

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import './MovieList.css'
 import MovieItem from '../MovieItem/MovieItem';
-
+import { Button } from '@material-ui/core';
 function MovieList() {
 
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function MovieList() {
 
     return (
         <main>
-            <button onClick={() => { history.push('/form') }}>Add a New Movie</button>
+            <Button variant="contained" color="link" onClick={() => { history.push('/form') }}>Add a New Movie</Button>
             <h1>MovieList</h1>
 
             <section className="movies">
