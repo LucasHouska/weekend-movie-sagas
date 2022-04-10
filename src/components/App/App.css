@@ -1,3 +1,16 @@
+body {
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+img {
+  height: 400px;
+  width: 250px;
+}
+
+li {
+  list-style-type: none;
+}
+
 .App {
   text-align: center;
 }
@@ -23,15 +36,6 @@
   to { transform: rotate(360deg); }
 }
 
-img {
-  height: 400px;
-  width: 250px;
-}
-
-li {
-  list-style-type: none;
-}
-
 .cards {
   display:flex;
   justify-content: space-between;
@@ -43,10 +47,10 @@ li {
   justify-content: space-between;
 }
 
-body {
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-}
-
 .InputLabel {
   width: 100px;
+}
+
+.button {
+  margin: 15px;
 }

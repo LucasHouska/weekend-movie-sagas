@@ -1,11 +1,17 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import {Button} from '@material-ui/core';
 
 function Details() {
 
     const history = useHistory();
+    const { id } = useParams();
 
     const details = useSelector(state => state.details)
+
+    // dispatch({ type: 'FETCH_GENRES', payload: id });
+
     const genres = useSelector(state => state.genres)
 
     console.log('details in Details is', details)
@@ -35,7 +41,7 @@ function Details() {
                     )
                 })}
             </ul>
-            <button onClick={backToMovies}>Back to Movie List</button>
+            <Button variant="contained" color="primary" onClick={backToMovies}>Back to Movie List</Button>
         </>
     )
 }

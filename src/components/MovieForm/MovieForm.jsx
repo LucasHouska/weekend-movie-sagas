@@ -53,9 +53,9 @@ function MovieForm() {
                         <MenuItem value='13'>Superhero</MenuItem>
                     </Select>
                 </FormControl>
-                <Button variant="contained" color="primary" type='submit'>Save</Button>
+                <Button className="button" variant="contained" color="primary" type='submit'>Save</Button>
             </form>
-            <Button variant="contained" color="secondary" onClick={() => { history.push('/') }}>Cancel</Button>
+            <Button className="button" variant="contained" color="secondary" onClick={() => { history.push('/') }}>Cancel</Button>
 
         </>
     )

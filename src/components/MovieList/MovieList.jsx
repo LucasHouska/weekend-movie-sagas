@@ -18,7 +18,7 @@ function MovieList() {
 
     return (
         <main>
-            <Button variant="contained" color="link" onClick={() => { history.push('/form') }}>Add a New Movie</Button>
+            <Button className="button" variant="contained" color="link" onClick={() => { history.push('/form') }}>Add a New Movie</Button>
             <h1>MovieList</h1>
 
             <section className="movies">

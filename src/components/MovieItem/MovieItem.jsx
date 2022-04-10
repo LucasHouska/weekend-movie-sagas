@@ -33,7 +33,7 @@ function MovieItem({ movie }) {
                     />
                 </CardActionArea>
                 <CardActions>
-                    <Button onClick={handleClick} size="small" color="primary">
+                    <Button onClick={handleClick} size="small" variant="outlined" color="primary">
                         More Details
                     </Button>
                 </CardActions>
