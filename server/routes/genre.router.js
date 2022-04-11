@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-router.get('/', (req, res) => {
+router.get('/:movie_id', (req, res) => {
 
   const movieId = req.params.movie_id;
   console.log(movieId);
